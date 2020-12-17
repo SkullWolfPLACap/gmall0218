@@ -1,0 +1,37 @@
+package com.atguigu.gmall0218.service;
+
+import com.atguigu.gmall0218.bean.*;
+
+import java.util.List;
+
+public interface ManageService {
+    List<BaseCatalog1> getCatalog1();
+
+    List<BaseCatalog2> getCatalog2(String catalog1Id);
+
+    List<BaseCatalog3> getCatalog3(String catalog2Id);
+
+    List<BaseAttrInfo> getAttrInfoList(String catalog3Id);
+
+    List<BaseAttrValue> getAttrValueList(String attrId);
+
+    void saveAttrInfo(BaseAttrInfo baseAttrInfo);
+
+    List<SpuInfo> getSpuList(String catalog3Id);
+
+    List<BaseSaleAttr> getBaseSaleAttrList();
+
+    void saveSpuInfo(SpuInfo spuInfo);
+
+    List<SpuImage> getSpuImageList(SpuImage spuImage);
+
+    List<SpuSaleAttr> getSpuSaleAttrList(String spuId);
+
+    void saveSkuInfo(SkuInfo skuInfo);
+
+    SkuInfo getSkuInfo(String skuId);
+
+    List<SpuSaleAttr> getSpuSaleAttrListCheckBySku(SkuInfo skuInfo);
+
+    List<SkuSaleAttrValue> getSkuSaleAttrValueListBySpu(String spuId);
+}
